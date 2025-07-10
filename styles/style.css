@@ -13,4 +13,337 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-ff);
+  font-variation-settings: var(--main-fw);
+  color: var(--black);
+  background-image: var(--page-background);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.header {
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 98px;
+}
+
+.header__box {
+  height: 368px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--black);
+}
+
+.header__title {
+  font-family: var(--accent-ff);
+  font-size: clamp(49px, calc(49px + 16 * ((100vw - 375px) / 1065)), 65px);
+}
+
+.header__subtitle {
+  text-transform: uppercase;
+  font-family: var(--accent-ff);
+  font-size: clamp(14px, calc(14px + 9 * ((100vw - 375px) / 1065)), 23px);
+}
+
+.memories {
+  padding-bottom: 100px;
+}
+
+.memories__cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  border: 2px solid var(--black);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.exhaustion {
+  filter: brightness(40%);
+}
+
+.woman {
+  filter: sepia(75%);
+}
+
+.men {
+    filter: grayscale(100%);
+}
+
+.sleepy {
+  filter: saturate(150%) blur(2px);
+}
+
+.sad {
+  filter: contrast(140%) brightness(50%);
+}
+
+.screaming {
+  filter:
+    brightness(70%)
+    contrast(140%) 
+    saturate(200%)
+    hue-rotate(290deg)
+    drop-shadow(0 0 10px #ff00ff);
+}
+
+.nervous {
+   filter: invert(100%);
+}
+
+.card__title {
+  padding: 4px 10px;
+  font-weight: 715;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--black);
+}
+
+.card__text {
+  border-top: 2px solid var(--black);
+  background-color: var(--white);
+  padding: 25px;
+}
+
+.card__text p {
+  margin-bottom: 25px;
+  line-height: 27px;
+}
+
+.card__like-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-self: right;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+}
+
+.card__icon-button {
+  max-height: 38px;
+  align-self: center;
+}
+
+.small-floppy {
+  width: 21px;
+  height: 21px;
+
+}
+
+.button__save {
+  width: 335px;
+  height: 55px;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.button__text {
+  line-height: 90%;
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: difference;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--black);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  background-color: var(--white);
+  color: var(--white);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--black);
+}
+
+.button::after {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+
+.button:hover::after {
+  transform: scaleX(1);
+}
+
+.img__wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-ff);
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow: 1px 1px var(--white);
+  z-index: 1;
+}
+
+.save-modal {
+  padding: 30px;
+  width: 353px;
+}
+
+.save-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal__button {
+  width: 100%;
+  height: 38px;
+  text-transform: uppercase;
+}
+
+.modal__info {
+  line-height: 150%;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: var(--accent-ff);
+}
+
+.big-floppy {
+  min-width: 39px;
+  height: 39px;
+  z-index: 3;
+}
+
+.modal__info-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible{
+  border: 2px solid var(--black);
+}
+
+.contour {
+  transition: 0.1s linear;
+}
+
+.like-icon.is-liked .contour{
+  fill: var(--red);
+  transition: 0.3s 0.06 linear;
+}
+
+.core {
+  transition: 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core{
+  fill: var(--black);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .core{
+  fill: var(--red);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core{
+  fill: var(--red);
+transition: fill 0.3s linear;
+}
+
+.main-body {
+  transition: 0.3s 0 linear;
+}
+
+.like-icon:hover .main-body{
+  fill: var(--black);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .main-body{
+  fill: var(--red);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .main-body{
+  fill: var(--red);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.heart {
+  transform-origin: center;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s 0.1s ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in;
+}
+
+
+
+@supports (-webkit-text-stroke: 1px var(--white)) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--white);
+  }
+}
+
+@media (width <= 375px) {
+  .header__box {
+    height: 375px;
+  }
+
+  .header {
+    padding-bottom: 100px;
+  }
+
+  .save-modal {
+    width: 343px;
+  }
 }

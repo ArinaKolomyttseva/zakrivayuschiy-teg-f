@@ -35,6 +35,7 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  padding: 0;
 }
 
 ul,
@@ -50,4 +51,12 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+button {
+    font-family: var(--accent-ff);
+    font-size: 14px;
+    display: flex;
+    background-color: var(--white);
+    border: none;
 }
