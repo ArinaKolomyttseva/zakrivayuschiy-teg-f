@@ -83,7 +83,7 @@
 }
 
 .men {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .sleepy {
@@ -95,16 +95,12 @@
 }
 
 .screaming {
-  filter:
-    brightness(70%)
-    contrast(140%) 
-    saturate(200%)
-    hue-rotate(290deg)
+  filter: brightness(70%) contrast(140%) saturate(200%) hue-rotate(290deg)
     drop-shadow(0 0 10px #ff00ff);
 }
 
 .nervous {
-   filter: invert(100%);
+  filter: invert(100%);
 }
 
 .card__title {
@@ -139,12 +135,13 @@
 .card__icon-button {
   max-height: 38px;
   align-self: center;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .small-floppy {
   width: 21px;
   height: 21px;
-
 }
 
 .button__save {
@@ -178,7 +175,7 @@
 }
 
 .button::after {
-    content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -191,7 +188,6 @@
   mix-blend-mode: difference;
   z-index: 1;
 }
-
 
 .button:hover::after {
   transform: scaleX(1);
@@ -250,16 +246,11 @@
   align-items: center;
 }
 
-.card__icon-button {
-  border: 2px solid transparent;
-  transition: border 0.3s ease;
-}
-
 .card__icon-button:focus {
   outline: none;
 }
 
-.card__icon-button:focus-visible{
+.card__icon-button:focus-visible {
   border: 2px solid var(--black);
 }
 
@@ -267,7 +258,7 @@
   transition: 0.1s linear;
 }
 
-.like-icon.is-liked .contour{
+.like-icon.is-liked .contour {
   fill: var(--red);
   transition: 0.3s 0.06 linear;
 }
@@ -276,36 +267,36 @@
   transition: 0.3s 0.03s linear;
 }
 
-.like-icon:hover .core{
+.like-icon:hover .core {
   fill: var(--black);
   transition: fill 0.3s linear;
 }
 
-.like-icon:active .core{
+.like-icon:active .core {
   fill: var(--red);
   transition: fill 0.3s linear;
 }
 
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
   fill: var(--red);
-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
 }
 
 .main-body {
   transition: 0.3s 0 linear;
 }
 
-.like-icon:hover .main-body{
+.like-icon:hover .main-body {
   fill: var(--black);
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon:active .main-body{
+.like-icon:active .main-body {
   fill: var(--red);
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .main-body{
+.like-icon.is-liked .main-body {
   fill: var(--red);
   transition: fill 0.3s 0.05s linear;
 }
@@ -325,8 +316,6 @@ transition: fill 0.3s linear;
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in;
 }
-
-
 
 @supports (-webkit-text-stroke: 1px var(--white)) {
   .card__label {
