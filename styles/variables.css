@@ -1,16 +1,23 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
- --main-ff: "Inter", sans-serif;
- --accent-ff: "PressStart2P", sans-serif;
-   --title-fw: 715;
+  --main-ff: "Inter", sans-serif;
+  --accent-ff: "PressStart2P", sans-serif;
+  --title-fw: 715;
   --main-fw: 410;
-  --container-width: clamp(375px, calc(375px + (700 - 375) * ((100vw - 375px) / 1065)), 700px);
+  --container-width: clamp(
+    375px,
+    calc(375px + (700 - 375) * ((100vw - 375px) / 1065)),
+    700px
+  );
   --white: #fff;
   --black: #000;
-  --red: #FF0000;
+  --red: #ff0000;
   --contour-color: var(--black);
-    --page-background: 
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+  --page-background: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 }

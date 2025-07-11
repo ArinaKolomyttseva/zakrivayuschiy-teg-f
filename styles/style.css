@@ -17,6 +17,7 @@
   font-variation-settings: var(--main-fw);
   color: var(--black);
   background-image: var(--page-background);
+  background-attachment: fixed;
 }
 
 .container {
@@ -31,7 +32,7 @@
 }
 
 .header__box {
-  height: 368px;
+  padding: 130px 0;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -44,12 +45,14 @@
 .header__title {
   font-family: var(--accent-ff);
   font-size: clamp(49px, calc(49px + 16 * ((100vw - 375px) / 1065)), 65px);
+  font-weight: 400;
 }
 
 .header__subtitle {
   text-transform: uppercase;
   font-family: var(--accent-ff);
   font-size: clamp(14px, calc(14px + 9 * ((100vw - 375px) / 1065)), 23px);
+  font-weight: 400;
 }
 
 .memories {
@@ -72,34 +75,35 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 
-.exhaustion {
+.filter-brightness {
   filter: brightness(40%);
 }
 
-.woman {
+.filter-sepia {
   filter: sepia(75%);
 }
 
-.men {
+.filter-grayscale {
   filter: grayscale(100%);
 }
 
-.sleepy {
+.filter-saturate-blur {
   filter: saturate(150%) blur(2px);
 }
 
-.sad {
+.filter-contrast-brightness {
   filter: contrast(140%) brightness(50%);
 }
 
-.screaming {
+.filter-cyberpunk {
   filter: brightness(70%) contrast(140%) saturate(200%) hue-rotate(290deg)
     drop-shadow(0 0 10px #ff00ff);
 }
 
-.nervous {
+.filter-invert {
   filter: invert(100%);
 }
 
@@ -260,7 +264,7 @@
 
 .like-icon.is-liked .contour {
   fill: var(--red);
-  transition: 0.3s 0.06 linear;
+  transition: 0.3s 0.06s linear;
 }
 
 .core {
@@ -320,14 +324,11 @@
 @supports (-webkit-text-stroke: 1px var(--white)) {
   .card__label {
     -webkit-text-stroke: 1px var(--white);
+    text-shadow: none;
   }
 }
 
 @media (width <= 375px) {
-  .header__box {
-    height: 375px;
-  }
-
   .header {
     padding-bottom: 100px;
   }
